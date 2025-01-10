@@ -143,40 +143,6 @@ const Mainpannel: React.FC = () => {
                     ))}
                 </div>
             )}
-
-            {/* Hierarchical Student Selection */}
-            {/* {selectedYear && (
-                <Card className="mb-4">
-                    <Card.Body>
-                        <Card.Title>Select Month for {selectedYear}</Card.Title>
-                        <ListGroup>
-                            {MONTHS.map((month, index) => (
-                                <ListGroup.Item 
-                                    key={index} 
-                                    action 
-                                    onClick={() => {
-                                        // Show batches for the selected month
-                                        const availableBatches = yearBatches[selectedYear]?.batches || DEFAULT_BATCHES;
-                                        
-                                        // Create a modal or dropdown for batch selection
-                                        const selectedBatch = availableBatches[0]; // Default to first batch
-                                        
-                                        navigateToStudentPanel(
-                                            selectedYear, 
-                                            selectedBatch, 
-                                            month
-                                        );
-                                    }}
-                                >
-                                    {month}
-                                </ListGroup.Item>
-                            ))}
-                        </ListGroup>
-                    </Card.Body>
-                </Card>
-            )} */}
-
-            {/* Batches Display for Selected Year */}
             {selectedYear && yearBatches && yearBatches[selectedYear] && yearBatches[selectedYear].batches && (
                 <Card className="mb-4">    
                     <Card.Body>
