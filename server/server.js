@@ -16,7 +16,13 @@ const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://dineshsiva693:dineshsiva693@cluster0.uep56.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
  ;
 // || 'mongodb://localhost:27017/Cybernaut_Slot-Booking';
- 
+  app.use(cors(
+  {
+    origin: ["https://deploy-mern-lwhq.vercel.app"],
+    methods :["post","get",],
+    credentials: true,
+  }
+ ));
 app.use(cors({
   origin: '*', 
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
